@@ -75,7 +75,7 @@ Get help for specific commands:
     $0 list-env --help
 
 EOF
-    exit 0
+    exit "${1:-0}"
 }
 
 
@@ -319,7 +319,7 @@ main() {
         *)
             log_error "Unknown command: $command"
             echo ""
-            usage
+            usage 1
             ;;
     esac
 }

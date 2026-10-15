@@ -285,7 +285,7 @@ main() {
             *)
                 log_error "Unknown option: $1"
                 usage
-                exit 0
+                exit 1
                 ;;
         esac
     done

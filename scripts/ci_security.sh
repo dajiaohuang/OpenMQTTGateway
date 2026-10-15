@@ -89,7 +89,7 @@ Examples:
     $0 --severity UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL --generate-sbom
 
 EOF
-    exit 0
+    exit "${1:-0}"
 }
 
 # Function to check if Trivy is installed
@@ -341,7 +341,7 @@ main() {
             *)
                 log_error "Unknown option: $1"
                 echo ""
-                usage
+                usage 1
                 ;;
         esac
     done

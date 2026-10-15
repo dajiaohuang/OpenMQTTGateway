@@ -376,7 +376,7 @@ Examples:
     $0 --check --verbose
 
 EOF
-    exit 0
+    exit "${1:-0}"
 }
 
 # Parse command line arguments
@@ -420,7 +420,7 @@ parse_args() {
                 ;;
             *)
                 log_error "Unknown option: $1"
-                usage
+                usage 1
                 ;;
         esac
     done
