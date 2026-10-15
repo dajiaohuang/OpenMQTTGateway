@@ -2607,18 +2607,21 @@ void SerialWeb::begin() {
 Dummy virtual functions carried over from Serial
 */
 int SerialWeb::available(void) {
+  return 0;
 }
 
 /*
 Dummy virtual functions carried over from Serial
 */
 int SerialWeb::peek(void) {
+  return -1;
 }
 
 /*
 Dummy virtual functions carried over from Serial
 */
 int SerialWeb::read(void) {
+  return -1;
 }
 
 /*
